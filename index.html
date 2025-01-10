@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Mortgage repayment calculator</title>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="main-container">
+    <div class="form-container">
+      <div class="form-header">
+        <h1>Mortgage Calculator</h1>
+        <a href="#">clear All</a>
+      </div>
+      <form class="form">
+        <label for="Number"> Mortgage Amount</label>
+       
+          
+        <input type="text" id="mortgage-amount" placeholder="Amount">
+      
+
+        <div class="form-inputs">
+          <div class="input">
+            <label for="Number"> Mortgage Term </label>
+          <input type="text" id="mortgage-term" placeholder="years">
+       
+          </div>
+          <div class="input"> 
+          <label for="Number"> Interest Rate </label>
+          <input type="text" id="interest-rate" placeholder="%">
+       
+          </div>
+          
+        </div>
+        <label for="checklist" id="type">Mortgage Type</label>
+        <div class="radio-buttons">
+          <input type="radio" class="fixed" name="mortgage-type" value="peace" checked >
+          <h5>Repayment</h5>
+        </div>
+        <div class="radio-buttons">
+          <input type="radio" class="fixed" name="mortgage-type" value="none" >
+          <h5>  Interest Only</h5>
+        </div>
+
+        <button type="submit" class="calculate-button"> 
+           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path fill="#133041" d="M18.75 2.25H5.25a1.5 1.5 0 0 0-1.5 1.5v16.5a1.5 1.5 0 0 0 1.5 1.5h13.5a1.5 1.5 0 0 0 1.5-1.5V3.75a1.5 1.5 0 0 0-1.5-1.5Zm-10.5 16.5a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25Zm0-3.75a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25ZM12 18.75a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25ZM12 15a1.125 1.125 0 1 1 0-2.25A1.125 1.125 0 0 1 12 15Zm3.75 3.75a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25Zm0-3.75a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25Zm1.5-5.25a.75.75 0 0 1-.75.75h-9a.75.75 0 0 1-.75-.75V6a.75.75 0 0 1 .75-.75h9a.75.75 0 0 1 .75.75v3.75Z"/></svg>
+        
+          Calculate Repayments
+        </button> 
+      </form>
+
+    </div >
+    <div class="results-container">
+      <div class="results-header">
+        <img src="./assets/images/image.png" alt="house">
+        <h2>Results shown here</h2>
+        <p>
+         Complete the form and click “calculate repayments” to see what 
+         your monthly repayments would be.
+        </p>
+     </div>
+      
+
+      <div class="calculated-header"  style="display: none;">
+        <h3> Your results</h3>
+          <p id="result">
+            Your results are shown below based on the information you provided. 
+            To adjust the results, edit the form and click “calculate repayments” again.
+          </p>
+          <div class="monthly-repayments">
+            <div id="span1">
+              <p id="month">  Your monthly repayments</p>
+             <span class="payment"> </span>
+            </div>
+            <div id="span2">
+              <p id="term">Total you'll repay over the term</p>
+              <span class="repay"> </span>
+            </div>
+          </div>
+            
+      </div>
+    </div>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>

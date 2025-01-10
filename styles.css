@@ -1,0 +1,320 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+     background-color: hsl(203, 41%, 72%);
+     overflow-x: hidden;
+}
+.main-container{
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px;
+    gap: 20px;
+}
+.form-container{
+    width: 100%;
+    
+   position: relative;
+    padding: 40px;
+    background-color: white;
+    border-radius: 10px ;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+img{
+    width: 20%;
+    
+}
+.form-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    
+}
+.form-header a{
+    font-family: "Plus Jakarta Sans", serif;
+    text-decoration: none;
+    color:  hsl(202, 55%, 16%);;
+}
+.form-header h1{
+    font-size: 1.5rem;
+    font-family: "Plus Jakarta Sans", serif;
+   
+}
+.form label{
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+    font-family: "Plus Jakarta Sans", serif;
+}
+.form-inputs {
+    display: flex;
+    gap: 50px;
+    width: 100%;
+    align-items: center;
+  
+  }
+  .input{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    
+    
+  }
+  .form-inputs label{
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+  }
+  
+ 
+
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.radio-buttons{
+    display: flex;
+    border: solid 1px hsl(202, 55%, 16%);
+    margin:5px;
+    height: 30px;
+    align-items: center;
+    gap: 5px;
+    font-family: "Plus Jakarta Sans", serif;
+    border-radius: 5px;
+    transition: all ;
+    cursor: pointer;
+   
+    
+}
+.radio-buttons::after{
+   
+    border-color: hsl(61, 86%, 38%);
+    
+}
+.fixed{
+    cursor: pointer;
+   
+    accent-color:yellow;
+}
+#type{
+    margin-top: 10px;
+}
+
+.calculate-button{
+    padding: 10px;
+    border-radius: 20px;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    font-family: "Plus Jakarta Sans", serif;
+    background-color:  hsl(61, 70%, 52%);
+    cursor: pointer;
+}
+#type{
+    margin-top: 15px;
+}
+
+#mortgage-amount[type="text"]{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: solid 1px hsl(202, 55%, 16%);
+   
+}
+#mortgage-term{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: solid 1px hsl(202, 55%, 16%);
+}
+
+#interest-rate{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: solid 1px hsl(202, 55%, 16%);
+}
+
+.results-container{
+    width: 100%;
+    background-color: hsl(202, 55%, 16%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    text-align: center;
+    color: hsl(202, 86%, 94%);
+    padding: 10px;
+    border-radius: 0px 10px 0px 10px;
+    font-family: "Plus Jakarta Sans", serif;
+}
+
+.calculated-header{
+   height: 50vh;
+}
+.calculated-header h3{
+    text-align: left;
+}
+ #result{
+    font-size:11px ;
+    text-align: left;
+}
+
+.monthly-repayments{
+    width: 80%;
+    border-top: 4px yellow solid;
+    height: 50%;
+    margin-top: 20px;
+    padding: 10px;
+    margin-left: 20px;
+    background-color: hsl(200, 64%, 6%);
+    
+}
+
+#month{
+    font-size: 11px;
+    text-align: left;
+}
+.payment{
+    margin-top: 10px;
+    font-size: 2rem;
+    color: yellow;
+}
+#term{
+    font-size:11px ;
+    text-align: left;
+    margin-top: 10px;
+}
+.repay{
+    font-size: 1rem;
+    font-family:  "Plus Jakarta Sans", serif;
+}
+#span1{
+    border-bottom: 1px gainsboro solid;
+    
+}
+.class{
+    font-size: 1rem;
+    font-family: "Plus Jakarta Sans", serif;
+
+}
+
+@media screen and (max-width:780px) {
+    
+    
+        body{
+            min-height: 100vh;
+            padding: 10px 10px;
+            margin: 0;
+            background-color: hsl(202, 86%, 94%);
+        }
+      
+        .main-container {
+            width: 100%;
+            flex-direction: column;
+            margin: 0;
+            gap: 20px;
+        }
+        .form-container,
+        .results-container {
+            width: 100%; /* Full width on mobile */
+        }
+    
+    
+    /* Ensure form inputs don't overflow */
+    input[type="text"] {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    /* Make sure images are responsive */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    /* Ensure content stays within containers */
+    .form-container,
+    .results-container {
+        width: 100%;
+        padding: 20px;
+        overflow: hidden; /* Prevents content from spilling out */
+    }
+    
+    /* Handle long content */
+    p, h1, h2, h3, h4, h5 {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+    
+    .form-container {
+        width: 100%;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .results-container {
+        width: 100%;
+        min-height: 300px; /* Give it minimum height */
+    }
+    
+    /* Make the form inputs stack on mobile */
+    .form-inputs {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .input {
+        width: 100%;
+    }
+    
+    /* Adjust the calculate button */
+    .calculate-button {
+        width: 100%; /* Make button full width on mobile */
+    }
+    
+    /* Adjust the monthly repayments section */
+    .monthly-repayments {
+        width: 90%;
+        margin: 20px auto;
+    }
+    
+    /* Adjust text sizes for mobile */
+    .form-header h1 {
+        font-size: 1.2rem;
+    }
+    
+    .payment {
+        font-size: 1.5rem;
+    }
+    
+    /* Fix image size on mobile */
+    .results-header img {
+        width: 30%;
+    }
+}
+
+/* Add a smaller breakpoint for very small devices */
+@media screen and (max-width: 480px) {
+    body {
+        padding: 10px 5px;
+    }
+    
+    .form-container {
+        padding: 15px;
+    }
+    
+    .form-header h1 {
+        font-size: 1rem;
+    }
+    
+    .calculate-button {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+}
